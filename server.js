@@ -17,7 +17,9 @@ app.use(bodyParser.json());
 const pokemon = require('./pokemon.js');
 
 // INDEX ROUTE
-
+app.get('/pokemon', function(req, res) {
+    res.send(pokemon);
+})
 
 
 
