@@ -18,7 +18,8 @@ const pokemon = require('./pokemon.js');
 
 // INDEX ROUTE
 app.get('/pokemon', function(req, res) {
-    res.send(pokemon);
+    Pokemon = pokemon;
+    res.render('index.ejs');
 })
 
 
