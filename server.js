@@ -25,6 +25,7 @@ app.get('/pokemon', function(req, res) {
 // SHOW ROUTE
 app.get('/pokemon/:id', function(req, res) {
     Pokemon = pokemon[req.params.id];
+    Index = req.params.id;
     res.render('show.ejs');
 })
 
