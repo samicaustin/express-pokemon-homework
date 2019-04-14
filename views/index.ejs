@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        * {text-align: center;}
         h1 {color:red;}
         p {color:blue;}
         img {height:100px;
@@ -19,9 +18,12 @@
         <ul class = "pokemon">
             <% for(let i = 0; i < Pokemon.length; i++){%>
                 <li>
-                   <%= Pokemon[i].name %> <img src = "<%= Pokemon[i].img %>"
+                 <a href= "/pokemon/<%=i%>"> <%= Pokemon[i].name %> <img src = "<%= Pokemon[i].img %>"> </a>
                 </li>
             <% } %>
+            <li>
+            Um ok but where's Charmeleon and Blastoise ???
+            </li>
         </ul>
 
 
