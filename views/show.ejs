@@ -6,44 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= Pokemon.name %></title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
-    <style>
-         * {text-align: center;}
-        h1 {
-            color:black;
-            font-family: 'Press Start 2P', cursive;}
-        p {
-            font-size:25px;
-            color:gray;
-            font-family: 'VT323', monospace;}
-        img {
-            height:150px;
-            width:auto;
-            padding:30px;
-        }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 10px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            font-family: 'VT323', monospace;}
-        .button:hover, a:hover {
-            opacity: .4;}
-       
-
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
    <h1> <%= Pokemon.name %> </h1><br>
    <p>
    Array Index of <%= Index %><br>
-    <img src = "<%= Pokemon.img %>"><br>
+    <img class = "show-img" src= "<%= Pokemon.img %>"><br>
     <form action="/pokemon">
         <input class ="button" type="submit" value="Back to Index"/>
     </form>
+
+    <form action="/pokemon/<%=id%>/edit" method="GET">
+        <button class="button" type = "submit">Edit</button>
+    </form>
+
+      <form action="/pokemon/<%=id%>?_method=DELETE" method="POST">
+        <button class="button" type = "submit">Delete</button>
+    </form>
+
 </p>
 </body>
 </html>

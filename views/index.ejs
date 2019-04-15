@@ -6,33 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokemon</title>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323" rel="stylesheet">
-    <style>
-        * {text-align: center;}
-        h1 {
-            color:black;
-            font-family: 'Press Start 2P', cursive;}
-        p, li, a {
-            font-size:25px;
-            color:gray;
-            font-family: 'VT323', monospace;
-            text-decoration:none;}
-        img {
-            height:25px;
-            width:auto;
-        }
-        .button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 10px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            font-family: 'VT323', monospace;}
-        .button:hover, a:hover {
-            opacity: .4;}
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     
@@ -41,13 +15,12 @@
         <ul class = "pokemon">
             <% for(let i = 0; i < Pokemon.length; i++){%>
                 <li>
-                 <a href= "/pokemon/<%=i%>"> <%= Pokemon[i].name %> <img src = "<%= Pokemon[i].img %>"> </a>
+                 <a href= "/pokemon/<%=i%>"> <%= Pokemon[i].name %> <img class ="index-img" src = "<%= Pokemon[i].img %>"> </a>
                 </li>
             <% } %>
-            <li>
-            Um ok but where's Charmeleon and Blastoise ???
-            </li>
         </ul>
-
+<form action="/pokemon/new" method="GET">
+    <button class="button" type="submit">Create New</button>
+</form>
 </body>
 </html>

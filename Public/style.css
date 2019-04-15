@@ -1,0 +1,33 @@
+* {text-align: center;}
+h1 {
+    color:black;
+    font-family: 'Press Start 2P', cursive;}
+p, li, a, input {
+    font-size:25px;
+    color:gray;
+    font-family: 'VT323', monospace;
+    text-decoration:none;}
+.index-img {
+    height:25px;
+    width:auto;
+}
+.show-img {
+    height:200px;
+    width:auto;
+    padding: 20px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'VT323', monospace;}
+.button:hover, a:hover {
+    opacity: .4;}
+ul {
+    list-style-type: none;
+}
